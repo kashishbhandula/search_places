@@ -1,0 +1,123 @@
+.search_places {
+  padding: 50px;
+}
+
+.search_box_cnt {
+  display: flex;
+  justify-content: flex-end;
+}
+.search_box {
+  display: flex;
+  height: 38px;
+  width: 241px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(206, 212, 218);
+  border-radius: 4px;
+  padding: 6px 12px;
+  justify-content: space-between;
+}
+.search_box:focus-within {
+  border-color: #7952b3;
+  box-shadow: 0 0 0 3px rgba(121, 82, 179, 0.25);
+  outline: none; /* Remove the default focus outline */
+}
+.search_box_input {
+  border: none;
+  font-size: 16px;
+  &:focus-visible {
+    outline: none;
+  }
+}
+.shortcut_key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  height: 24px;
+  width: 60px;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 2px;
+  color: grey;
+  font-size: 12px;
+}
+
+.city_table_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 40px;
+}
+
+.city_table {
+  border-collapse: collapse;
+}
+
+.city_table th {
+  font-weight: 700;
+  width: 100vw;
+}
+.city_table th,
+td {
+  border: none;
+  padding: 8px;
+}
+
+.city_table tr {
+  border-bottom: 1px solid rgb(222, 226, 230);
+  padding: 8px;
+  text-align: left;
+}
+
+.page_block {
+  margin-top: 40px;
+  height: 30px;
+  width: 200px;
+  background-color: white;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.page_size_editor_cnt {
+  display: flex;
+  justify-content: flex-start;
+}
+.validation_error {
+  color: red;
+}
+
+.loader-container {
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top: 8px solid #333;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.no_data_found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
