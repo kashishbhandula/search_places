@@ -28,7 +28,7 @@ export default function SearchPlaces() {
     try {
       const response = await fetch(`${CITI_API_URL}?${queryString}`, options);
       const result = await response.json();
-      setTotalPages(result?.metadata?.totalCount);
+      setTotalPages(Math.ceil(result?.metadata?.totalCount / (pageSize * 1.0)));
       setCityData(result?.data);
     } catch (error) {
       console.error(error);
@@ -45,7 +45,7 @@ export default function SearchPlaces() {
     <div className="search_places">
       {cityLoader && <Loader></Loader>}
       <div className="search_box_cnt">
-        <SearchBox city={city} setCity={setCity} loader={cityLoader}/>
+        <SearchBox city={city} setCity={setCity} loader={cityLoader} />
       </div>
       <CityTableWrapper
         loader={cityLoader}
